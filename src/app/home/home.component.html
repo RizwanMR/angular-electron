@@ -1,7 +1,29 @@
 <div class="container">
   <h1 class="title">
-    {{ 'PAGES.HOME.TITLE' | translate }}
+    {{ "PAGES.HOME.TITLE" | translate }}
   </h1>
 
-  <a routerLink="/detail">{{ 'PAGES.HOME.GO_TO_DETAIL' | translate }}</a>
+  <a routerLink="/detail">{{ "PAGES.HOME.GO_TO_DETAIL" | translate }}</a>
 </div>
+
+<svg width="200" height="200">
+  <g class="link">
+    <path
+      class="link_background link_path"
+      d="M 55 30 C 92.5 30 117.5 30 155 30"
+    ></path>
+    <path
+      class="link_outline link_path"
+      d="M 55 30 C 92.5 30 117.5 30 155 30"
+      fill="none"
+      stroke="none"
+      stroke-width="0"
+      opacity="0"
+    ></path>
+    <path
+      class="link_line link_path"
+      d="M 55 30 C 92.5 30 117.5 30 155 30"
+      style="stroke: rgb(103, 123, 252)"
+    ></path>
+  </g>
+</svg>

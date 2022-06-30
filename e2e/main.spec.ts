@@ -52,6 +52,12 @@ test.describe('Check Home Page', async () => {
     expect(text).toBe('App works !');
   });
 
+  test('CLick link', async () => {
+    const elem = await firstWindow.locator(`(//*[contains(@class,'link_line link_path')])[1]`);
+    const text = await elem.click();
+    expect(true).toBe(true);
+  });
+
   test.afterAll( async () => {
     await context.tracing.stop({ path: 'e2e/tracing/trace.zip' });
     await app.close();
