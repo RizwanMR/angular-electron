@@ -52,7 +52,19 @@ test.describe('Check Home Page', async () => {
     expect(text).toBe('App works !');
   });
 
-  test.afterAll( async () => {
+  test('Click Box', async () => {
+    const elem = firstWindow.locator(`(//*[contains(@class,'box')])[1]`);
+    const text = await elem.click();
+    expect(true).toBe(true);
+  });
+
+  test('Click link', async () => {
+    const elem = firstWindow.locator(`(//*[contains(@class,'path-elm')])[1]`);
+    const text = await elem.click();
+    expect(true).toBe(true);
+  });
+
+  test.afterAll(async () => {
     await context.tracing.stop({ path: 'e2e/tracing/trace.zip' });
     await app.close();
   });
